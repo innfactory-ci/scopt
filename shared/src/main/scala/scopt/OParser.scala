@@ -275,11 +275,11 @@ object OParser {
         sequence(ps.head, ps.tail: _*)
       }
 
-  private[this] lazy val psetup0 = new DefaultOParserSetup with OParserSetup {
+  private[this] lazy val psetup0: DefaultOParserSetup = new DefaultOParserSetup with OParserSetup {
     def showUsageAsError(): Unit = ()
     def showTryHelp(): Unit = ()
   }
-  private[this] lazy val esetup0 = new DefaultOEffectSetup with OEffectSetup {
+  private[this] lazy val esetup0: DefaultOEffectSetup = new DefaultOEffectSetup with OEffectSetup {
     def showUsageAsError(): Unit = ()
     def showTryHelp(): Unit = ()
   }

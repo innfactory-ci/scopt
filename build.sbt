@@ -4,7 +4,7 @@ def v: String = "4.1.1-SNAPSHOT"
 
 ThisBuild / version := v
 ThisBuild / scalaVersion := scala213
-ThisBuild / crossScalaVersions := Seq(scala211, scala212, scala213, scala3)
+ThisBuild / crossScalaVersions := Seq(scala212, scala213, scala3)
 ThisBuild / scalafmtOnCompile := true
 ThisBuild / semanticdbEnabled := false
 
