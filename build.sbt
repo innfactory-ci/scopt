@@ -52,8 +52,6 @@ lazy val scopt = (crossProject(JSPlatform, JVMPlatform, NativePlatform) in file(
     testFrameworks += new TestFramework("verify.runner.Framework"),
     // libraryDependencies += "org.scalameta" %% "munit" % "0.7.20" % Test,
     // testFrameworks += new TestFramework("munit.Framework"),
-    // scaladoc fix
-    Compile / unmanagedClasspath += Attributed.blank(new java.io.File("doesnotexist"))
   )
   .platformsSettings(JVMPlatform, JSPlatform)(
     Seq(Compile, Test).map { x =>
