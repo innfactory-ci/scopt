@@ -16,21 +16,24 @@ jobs:
         include:
           - os: ubuntu-latest
             java: 8
+            distribution: zulu
             jobtype: 1
           - os: ubuntu-latest
             java: 8
+            distribution: zulu
             jobtype: 2
           - os: ubuntu-latest
             java: 17
+            distribution: temurin
             jobtype: 1
     runs-on: ${{ matrix.os }}
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v7
     - name: Setup JDK
-      uses: actions/setup-java@v4
+      uses: actions/setup-java@v5
       with:
-        distribution: temurin
+        distribution: "${{ matrix.distribution }}"
         java-version: "${{ matrix.java }}"
         cache: sbt
     - uses: sbt/setup-sbt@v1
